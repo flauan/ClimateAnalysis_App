@@ -19,7 +19,7 @@ print("TEST")
 # import matplotlib.pyplot as plt
 # import datetime as datetime
 
-# from flask import Flask, jsonify
+from flask import Flask, jsonify
 
 # engine = create_engine('mysql://b5kj3n966clep7oc:wae1501lpo2yoilq@ehc1u4pmphj917qf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/et3812lmc7w8mzbn', echo=False)
 # Base = automap_base()
@@ -31,19 +31,19 @@ print("TEST")
 
 # session = Session(engine)
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
-# @app.route("/")
-# def welcome():
-#     """List all available api routes."""
-#     return (
-#         f"Available Routes:<br/>"
-#         f"/api/v1.0/precipitation<br/>"
-#         f"/api/v1.0/stations<br/>"
-#         f"/api/v1.0/tobs<br/>"
-#         f"/api/v1.0/start date <br/>"
-#         f"/api/v1.0/start date/end date"
-#     )
+@app.route("/")
+def welcome():
+    """List all available api routes."""
+    return (
+        f"Available Routes:<br/>"
+        f"/api/v1.0/precipitation<br/>"
+        f"/api/v1.0/stations<br/>"
+        f"/api/v1.0/tobs<br/>"
+        f"/api/v1.0/start date <br/>"
+        f"/api/v1.0/start date/end date"
+    )
 
 # @app.route("/api/v1.0/precipitation")
 # def precip():
@@ -163,5 +163,5 @@ print("TEST")
 
 #     return jsonify(temp_lst)
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)
