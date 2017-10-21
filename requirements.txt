@@ -11,3 +11,4 @@ SQLAlchemy==1.1.14
 Werkzeug==0.12.2
 pandas==0.20.1
 matplotlib==2.0.2
+numpy==1.12.1
